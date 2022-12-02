@@ -1,0 +1,73 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* let's style that thing */
+@keyframes spin {
+    to{
+    transform: rotate(360deg);
+    }
+}
+@keyframes loader {
+    to{
+    transform: rotate(-360deg);
+    }
+}
+.spin{
+    background-color: red;
+  animation:spin 750ms infinite linear;
+}
+// .rspin{
+    
+// }
+.loader {
+  border-radius:100%;
+  animation:loader 2250ms infinite linear;
+  position:relative;
+  height:75px;
+  width:75px;
+  overflow:hidden; 
+  .c {
+    position:absolute; left:50%; top:50%;
+    margin:-34% 0 0 -34%;
+    width:68%;
+    height:68%;
+    background-color:#fff;
+    border-radius:100%;
+    z-index:3;
+  }
+  
+  .d {
+    position:absolute; top:0; bottom:0; left:0; right:0; 
+    .e { 
+      width :15px;
+      position:absolute; top:1%; left:50%; 
+      margin:0 0 0 -7.5px;
+      height:14px;
+      transform:rotate(10deg) skew(20deg); 
+      border-radius:3px;
+      background:#999;
+     }
+  }
+  .r {
+    z-index:2;
+    position:absolute; left:50%; top:-1px; bottom:-1px;
+    margin-left:-3.75px;
+    background-color:#fff;
+    width:7.5px;
+  }
+  .r1 { transform:rotate(0deg);}
+  .r2 {transform:rotate(45deg);}
+  .r3 {transform:rotate(90deg);}
+  .r4 {transform:rotate(135deg);}
+}
+
